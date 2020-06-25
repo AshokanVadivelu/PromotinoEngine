@@ -1,0 +1,215 @@
+﻿@model UserProfile.Models.SkuModel
+
+@{
+    ViewBag.Title = "OrderProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>OrderProduct</h2>
+<style>
+    #ProductDiv {
+        width: 900px;
+        border: 15px solid gray;
+        padding: 50px;
+        margin: 20px;
+    }
+</style>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>SkuModel</h4>
+        
+        <div id="ProductDiv">
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProductA, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ProductA, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductA, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProductAcount, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ProductAcount, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductAcount, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProductAprice, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ProductAprice, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductAprice, "", new { @class = "text-danger" })
+                </div>
+            </div>
+</div>
+
+        <div id="ProductDiv">
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProductB, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ProductB, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductB, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProductBcount, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ProductBcount, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductBcount, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProductBprice, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ProductBprice, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductBprice, "", new { @class = "text-danger" })
+                </div>
+            </div>
+</div>
+        <div id="ProductDiv">
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProductC, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ProductC, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductC, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProductCcount, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ProductCcount, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductCcount, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProductCprice, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ProductCprice, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductCprice, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            </div>
+
+        <div id="ProductDiv">
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProductD, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ProductD, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductD, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProductDcount, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ProductDcount, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductDcount, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ProductDprice, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ProductDprice, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ProductDprice, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="button" value="Place Order" id="btnOrder" class="btn btn-default" />
+                </div>
+                <br />
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="button" value="Clear Order" id="btnClear" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(function () {
+            $('#ProductA').val('Product A Rs.50');
+            $('#ProductA').attr('readonly', 'true');
+
+
+            $('#ProductB').val('Product B Rs.30');
+            $('#ProductB').attr('readonly', 'true');
+
+
+            $('#ProductC').val('Product C Rs.20');
+            $('#ProductC').attr('readonly', 'true');
+
+
+            $('#ProductD').val('Product D Rs.15');
+            $('#ProductD').attr('readonly', 'true');
+
+
+            $("#ProductDprice").attr('readonly', 'true');
+
+            $("#ProductAprice").attr('readonly', 'true');
+
+            $("#ProductBprice").attr('readonly', 'true');
+
+            $("#ProductCprice").attr('readonly', 'true');
+
+
+
+
+            $('#btnClear').click(function () {
+                $("#ProductDcount").val("");
+                $("#ProductDprice").val("");
+
+                $("#ProductAcount").val("");
+                $("#ProductAprice").val("");
+
+                $("#ProductBcount").val("");
+                $("#ProductBprice").val("");
+
+                $("#ProductCcount").val("");
+                $("#ProductCprice").val("");
+            });
+
+            $("#btnOrder").click(function () {
+
+                var serviceURL = "/PurchaseBuzLogic/GetTotal";
+                var model = {};
+                model.ProductAcount = $("#ProductAcount").val();
+                model.ProductBcount = $("#ProductBcount").val();
+                model.ProductCcount = $("#ProductCcount").val();
+                model.ProductDcount = $("#ProductDcount").val();
+                $.ajax({
+                    type: "POST",
+                    url: serviceURL,
+                    data: '{model: ' + JSON.stringify(model) + '}',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        if (result != null) {
+                            $("#ProductAprice").val(result.ProductAprice);
+
+                            $("#ProductBprice").val(result.ProductBprice);
+
+                            $("#ProductCprice").val(result.ProductCprice);
+
+                            $("#ProductDprice").val(result.ProductDprice);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+}
